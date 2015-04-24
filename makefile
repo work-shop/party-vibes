@@ -4,6 +4,11 @@ EXIT = tar/bundle.js
 
 all: serve
 
+install:
+	sudo npm install -g browserify
+	sudo npm install -g watchify
+	sudo npm install
+
 watch:
 	watchify -r $(ENTRY) -o $(EXIT) --debug --verbose
 
