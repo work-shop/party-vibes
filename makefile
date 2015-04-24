@@ -10,10 +10,10 @@ install:
 	sudo npm install
 
 watch:
-	watchify -r $(ENTRY) -o $(EXIT) --debug --verbose
+	watchify $(ENTRY) -o $(EXIT) --debug --verbose
 
 build:
-	browserify -r $(ENTRY) --outfile $(EXIT)
+	browserify $(ENTRY) > $(EXIT)
 
 serve:
 	node index.js
